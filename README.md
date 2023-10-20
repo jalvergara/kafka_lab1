@@ -18,3 +18,13 @@ enviar mensajes
 console2
 
 - kafka-console-consumer --bootstrap-server kafka-broker-1:9092 --topic lab1-topic --from-beginning
+
+Important commands: 
+
+List topics:
+
+- kafka-topics  --bootstrap-server kafka-broker-1:9092 --list
+
+get topic offset:
+
+- kafka-run-class kafka.tools.GetOffsetShell --broker-list kafka-broker-1:9092 --topic lab1-topic
