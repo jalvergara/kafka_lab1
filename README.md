@@ -1,6 +1,6 @@
 # Instrucciones para correr kafka con Docker - Lab 1
 
-Running docker compose:
+## Running docker compose:
 
 - docker-compose up
 - docker ps
@@ -19,7 +19,7 @@ console2
 
 - kafka-console-consumer --bootstrap-server kafka-broker-1:9092 --topic lab1-topic --from-beginning
 
-Important commands: 
+### Important commands: 
 
 List topics:
 
