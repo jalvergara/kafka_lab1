@@ -10,9 +10,9 @@ services: #Containers to run
     ports: #maps port 2181 from the host to por 2181 inside the zookeeper container, allows to access zookeeper on port 2181 of your host machine
       - 2181:2181
 
-  kafka-broker-1: # Second container (Service)
+  kafka-test: # Second container (Service)
     image: confluentinc/cp-kafka:latest #latest version of kafka docker image
-    container_name: kafka-broker-1 #Name of the container
+    container_name: kafka-test #Name of the container
     depends_on:
       - zookeeper #depends on zookeeper so kafka will not start until zookeeper service is up and running
     environment:
@@ -25,3 +25,6 @@ services: #Containers to run
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
     ports:
       - "9092:9092" # port to use to connect from kafka broker to local host port
+    expose:
+     - "9093"
+
