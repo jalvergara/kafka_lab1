@@ -10,14 +10,14 @@ Open two new terminals and run the following command in each terminal:
 
 console1
 
-- kafka-topics --bootstrap-server kafka-test:9092 --create --topic kafka_lab2
-- kafka-console-producer --bootstrap-server kafka-test:9092 --topic lab1-topic2
+- kafka-topics --bootstrap-server kafka-test:9092 --create --topic test_clase_kafka
+- kafka-console-producer --bootstrap-server kafka-test:9092 --topic test_clase_kafka
 
 enviar mensajes
 
 console2
 
-- kafka-console-consumer --bootstrap-server kafka-test:9092 --topic kafka_lab2 --from-beginning
+- kafka-console-consumer --bootstrap-server kafka-test:9092 --topic test_clase_kafka --from-beginning
 
 ### Important commands: 
 
@@ -27,4 +27,4 @@ List topics:
 
 get topic offset:
 
-- kafka-run-class kafka.tools.GetOffsetShell --broker-list kafka-test:9092 --topic lab1-topic2
+- kafka-run-class kafka.tools.GetOffsetShell --broker-list kafka-test:9092 --topic test_clase_kafka
