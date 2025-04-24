@@ -25,6 +25,6 @@ List topics:
 
 - kafka-topics  --bootstrap-server kafka-test:9092 --list
 
-get topic offset:
+get topic offset when connecting as the consumer:
 
-- kafka-run-class kafka.tools.GetOffsetShell --broker-list kafka-test:9092 --topic test_clase_kafka
+- kafka-console-consumer --bootstrap-server kafka-test:9092 --topic test_clase_kafka --from-beginning --property print.offset=true
